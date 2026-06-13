@@ -21,7 +21,9 @@
         {% assign url = site.url | append: site.baseurl | append: page.url %}
     {% endif %}
     <meta name="description" content="{{ desc }}">
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
     {% if site.favicon %}
@@ -60,9 +62,14 @@
                 <img id="ins-logo" src="{{ site.ins_logo }}" />
             {% endif %}
             <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+            <button id="search-trigger" type="button" aria-label="Search (Ctrl+K)">
+                <svg class="search-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span class="search-trigger-label">Search</span>
+                <kbd>Ctrl K</kbd>
+            </button>
             <ul id="navlist" class="alignable pull-right navbar-ul">
                 {% for x in site.nav %}
-                    {% if x.name == "Resume" %}
+                    {% if x.link contains ".pdf" %}
                         <li class="alignable pull-left nav-list"><a target="_blank" href="{{ x.link }}">{{ x.name }}</a>
                     {% else %}
                         <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ x.name }}</a>
@@ -75,7 +82,6 @@
             </ul>
         </div>
         <div style="clear:both"></div>
-        <hr>
         {% if page.is_contact == true %}
             <div class="container content contact">
         {% else %}
@@ -83,8 +89,7 @@
         {% endif %}
                 {{ content }}
                 {% if site.footer == true %}
-                    <hr />
-                    <p style="text-align: center; margin-bottom: 10px">
+                    <p style="text-align: center; margin: 40px 0 10px">
                     <a href="{{ site.footer_url }}" style="color: black"><small>{{ site.footer_text }}</small></a>
                     </p>
                 {% endif %}
@@ -100,6 +105,27 @@
           ga('send', 'pageview');
         </script>
     {% endif %}
+
+    <!-- Ctrl+K fuzzy search modal -->
+    <div id="search-overlay" aria-hidden="true">
+        <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search About and Blog">
+            <div class="search-input-row">
+                <svg class="search-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input id="search-input" type="text" placeholder="Search About &amp; Blog…"
+                       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                       role="combobox" aria-expanded="true" aria-controls="search-results" aria-autocomplete="list">
+            </div>
+            <ul id="search-results" role="listbox" aria-label="Search results"></ul>
+            <div class="search-footer">
+                <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+                <span><kbd>↵</kbd> open</span>
+                <span><kbd>esc</kbd> close</span>
+            </div>
+        </div>
+    </div>
+    <script>window.SEARCH_INDEX_URL = "{{ '/search.json' | relative_url }}";</script>
+    <script src="{{ '/assets/js/fuse.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
 <footer>
 </footer>

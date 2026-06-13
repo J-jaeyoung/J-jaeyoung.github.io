@@ -11,8 +11,35 @@ html {
 }
 body {
     margin: 0;
-    font-family: "Inconsolata";
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1f2328;
     height: 100%;
+}
+code, pre, kbd, tt {
+    font-family: "Inconsolata", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+code {
+    font-size: 0.88em;
+    background: #f2f3f5;
+    padding: 0.1em 0.4em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+pre {
+    background: #f6f8fa;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 12px 14px;
+    overflow-x: auto;
+    line-height: 1.45;
+}
+pre code {
+    font-size: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
@@ -129,3 +156,4 @@ hr {
 
 @import "typography";
 @import "tables";
+@import "search";

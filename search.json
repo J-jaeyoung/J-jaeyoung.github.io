@@ -1,0 +1,45 @@
+---
+permalink: /search.json
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  Build-time search index for the Ctrl+K fuzzy search.
+  - About page (index.md, url "/") is split into one entry per "## section",
+    each linking to its kramdown auto-generated anchor (e.g. /#publications).
+  - Every blog post becomes one entry.
+  All string fields go through `jsonify` so quotes / newlines / unicode are
+  escaped safely (never hand-roll JSON escaping).
+{%- endcomment -%}
+{%- assign about = site.pages | where: "url", "/" | first -%}
+[
+{%- assign sep = "" -%}
+{%- if about -%}
+  {%- assign chunks = about.content | split: '<h2 ' -%}
+  {%- for chunk in chunks -%}
+    {%- if forloop.first -%}{%- continue -%}{%- endif -%}
+    {%- assign idparts = chunk | split: '"' -%}
+    {%- assign id = idparts[1] -%}
+    {%- assign hparts = chunk | split: '>' -%}
+    {%- assign heading = hparts[1] | split: '<' | first | replace: '&amp;', '&' | strip -%}
+    {%- assign body = chunk | split: '</h2>' | last | strip_html | normalize_whitespace | strip -%}
+    {{ sep }}{
+      "title": {{ heading | jsonify }},
+      "type": "About",
+      "url": {{ "/#" | append: id | relative_url | jsonify }},
+      "content": {{ body | jsonify }}
+    }
+    {%- assign sep = "," -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- for post in site.posts -%}
+  {{ sep }}{
+    "title": {{ post.title | jsonify }},
+    "type": "Blog",
+    "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+    "url": {{ post.url | relative_url | jsonify }},
+    "content": {{ post.content | strip_html | normalize_whitespace | strip | jsonify }}
+  }
+  {%- assign sep = "," -%}
+{%- endfor -%}
+]

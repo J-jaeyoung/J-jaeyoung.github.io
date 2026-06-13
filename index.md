@@ -1,45 +1,53 @@
 ---
 layout: default
+title: Jaeyoung Chung
+description: "Ph.D. student at Seoul National University (CompSec Lab). Kernel & GPU driver security: bug discovery, reliable reproduction, and exploitation."
 ---
 
 ## About Me
 
-<img class="profile-picture" src="sherlock.jpg">
+<img class="profile-picture" src="jy.jpg">
 
-Hi! I am a junior year student of B.E. Computer Science at Birla Institute of Technology and Science, Pilani.
+Hi! I'm **Jaeyoung Chung**, a Ph.D. student in the
+[CompSec Lab](https://compsec.snu.ac.kr) at **Seoul National University**,
+advised by [Prof. Byoungyoung Lee](https://lifeasageek.github.io/).
 
-This is a jekyll based resume template. You can find the full source code on [GitHub](https://github.com/bk2dcradle/researcher)
+My research focuses on **Linux and Android kernel security**. I am especially
+interested in **concurrency bugs**, including scalable discovery,
+deterministic reproduction, and exploitability analysis. I also work on
+**GPU driver security**, analyzing emerging attack surfaces and designing
+practical defenses.
 
-## Research Interest
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus ipsum ac erat aliquam dapibus. Vestibulum vehicula placerat ex, a consectetur odio pharetra quis. Mauris id urna ante. Fusce pharetra diam ac nisi aliquet, vel egestas ex iaculis. Pellentesque laoreet cursus tellus sed pellentesque. Praesent a rhoncus elit. Nunc ipsum nisl, consequat sit amet pretium quis, gravida id ipsum.
+My goal is to **make systems more secure** by systematically
+discovering unknown bugs and building defenses that prevent their exploitation.
 
 ## Publications
 
-1. F.Bar, J.Doe: Effects of having a placeholder of a name
-2. S.Holmes, J.Watson: Consequences of living with a sociopath in London
+<small>\* indicates equal contribution </small>
 
-## Typography
+1. **DMGuard: Safeguarding Kernels from Physical Page Use-After-Free Vulnerabilities**<br>
+   Juhee Kim\*, <u>Jaeyoung Chung</u>\*, Dae R. Jeong, and Byoungyoung Lee<br>
+   *USENIX Security Symposium (Security)*, 2026
 
-This is a [link](http://google.com). Something *italics* and something **bold**.
+2. **GHost in the SHELL: A GPU-to-Host Memory Attack and Its Mitigation**<br>
+   Sihyun Roh, Woohyuk Choi, <u>Jaeyoung Chung</u>, Yoochan Lee, Suhwan Song, and Byoungyoung Lee<br>
+   *IEEE Symposium on Security and Privacy (S&P)*, 2026
 
-Here is a table
+3. **TikTag: Breaking ARM's Memory Tagging Extension with Speculative Execution**<br>
+   Juhee Kim, Jinbum Park, Sihyun Roh, <u>Jaeyoung Chung</u>, Youngjoo Lee, Taesoo Kim, and Byoungyoung Lee<br>
+   *IEEE Symposium on Security and Privacy (S&P)*, 2025
 
-Year | Award | Category
------|-------|--------
-2014 | Emmy  | Won Outstanding Lead Actor in a miniseries or a movie
-2015 | BAFTA | Nominated for Best Leading Actor for Sherlock
-2014 | Satellite | Won Best Actor miniseries or television film
+## Vulnerabilities & Exploits
 
-Here is a horizontal rule
+* **[Google kernelCTF](https://google.github.io/security-research/kernelctf/rules.html): LTS / COS 0-day Winner**
+  * [exp448](https://github.com/J-jaeyoung/security-research/blob/submit-cve-2026-46242/pocs/linux/kernelctf/CVE-2026-46242_lts_cos/docs/exploit.md): [CVE-2026-46242](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=a6dc643c69311677c574a0f17a3f4d66a5f3744b) on `lts-6.12.67` and `cos-121-18867.294.100`
+* **Arm Mali GPU driver**
+  * [CVE-2025-0819](https://developer.arm.com/documentation/110466/1-0/): concurrency UAF bug
+* **[KrCERT / KISA Hall of Fame](https://knvd.krcert.or.kr/overview/honor) (2024), Ranked 10th**
+  * Reported 9 KVE-assigned remote code execution vulnerabilities in Korean image-viewer software
 
----
+## Contact
 
-Here is a blockquote
-
-> To a great mind, nothing is little
-
-## References
-
-* Foo Bar: Head of Department, Placeholder Names, Lorem
-* John Doe: Associate Professor, Department of Computer Science, Ipsum
+* **Email:** [jjy600901@snu.ac.kr](mailto:jjy600901@snu.ac.kr)
+* **GitHub:** [github.com/J-jaeyoung](https://github.com/J-jaeyoung)
+* **Lab:** [CompSec Lab, Seoul National University](https://compsec.snu.ac.kr)

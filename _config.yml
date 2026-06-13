@@ -1,15 +1,20 @@
-title: Researcher
+title: Jaeyoung Chung
+author: Jaeyoung Chung
+description: "Ph.D. student at Seoul National University (CompSec Lab). Kernel & GPU driver security: bug discovery, reliable reproduction, and exploitation."
 url: "https://j-jaeyoung.github.io"
 baseurl: ""
 
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
 #ins_logo: "./bits-logo.png"
+
+profile_picture: "/jy.jpg"
 
 tracking_id: #
 
 footer: yes
-footer_url: "https://github.com/ankitsultana"
-footer_text: "Page design by Ankit Sultana"
+footer_url: "https://github.com/ankitsultana/researcher"
+footer_text: "Theme: Researcher by Ankit Sultana"
 
 sass:
     style: compressed
@@ -18,7 +23,7 @@ sass:
 nav:
  - name: "About"
    link: "/"
- - name: "Resume"
-   link: "resume.pdf"
- - name: "Contact"
-   link: "contact"
+ - name: "CV"
+   link: "/cv.pdf"
+ - name: "Blog"
+   link: "/blog/"
