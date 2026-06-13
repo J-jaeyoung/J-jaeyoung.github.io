@@ -1,0 +1,12 @@
+{%- comment -%}
+  Pill links for a publication / vulnerability entry.
+  Usage (only the params you pass are rendered):
+    {% include entry-links.html paper="URL" code="URL" blog="URL" %}
+  Drop a param (or leave it empty) to hide that badge.
+{%- endcomment -%}
+{%- capture pills -%}
+{%- if include.paper and include.paper != "" %}<a class="entry-link" href="{{ include.paper }}" target="_blank" rel="noopener">📄 Paper</a>{% endif -%}
+{%- if include.code and include.code != "" %}<a class="entry-link" href="{{ include.code }}" target="_blank" rel="noopener">💻 Code</a>{% endif -%}
+{%- if include.blog and include.blog != "" %}<a class="entry-link" href="{{ include.blog }}" target="_blank" rel="noopener">📝 Blog</a>{% endif -%}
+{%- endcapture -%}
+{%- if pills != "" -%}<span class="entry-links">{{ pills }}</span>{%- endif -%}

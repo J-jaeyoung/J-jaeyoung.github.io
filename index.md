@@ -28,19 +28,23 @@ discovering unknown bugs and building defenses that prevent their exploitation.
 1. **DMGuard: Safeguarding Kernels from Physical Page Use-After-Free Vulnerabilities**<br>
    Juhee Kim\*, <u>Jaeyoung Chung</u>\*, Dae R. Jeong, and Byoungyoung Lee<br>
    *USENIX Security Symposium (Security)*, 2026
+   {% include entry-links.html %}
 
 2. **GHost in the SHELL: A GPU-to-Host Memory Attack and Its Mitigation**<br>
    Sihyun Roh, Woohyuk Choi, <u>Jaeyoung Chung</u>, Yoochan Lee, Suhwan Song, and Byoungyoung Lee<br>
    *IEEE Symposium on Security and Privacy (S&P)*, 2026
+   {% include entry-links.html %}
 
 3. **TikTag: Breaking ARM's Memory Tagging Extension with Speculative Execution**<br>
    Juhee Kim, Jinbum Park, Sihyun Roh, <u>Jaeyoung Chung</u>, Youngjoo Lee, Taesoo Kim, and Byoungyoung Lee<br>
-   *IEEE Symposium on Security and Privacy (S&P)*, 2025
+   *IEEE Symposium on Securit`y and Privacy (S&P)*, 2025
+   {% include entry-links.html %}
 
 ## Vulnerabilities & Exploits
 
 * **[Google kernelCTF](https://google.github.io/security-research/kernelctf/rules.html): LTS / COS 0-day Winner**
-  * [exp448](https://github.com/J-jaeyoung/security-research/blob/submit-cve-2026-46242/pocs/linux/kernelctf/CVE-2026-46242_lts_cos/docs/exploit.md): [CVE-2026-46242](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=a6dc643c69311677c574a0f17a3f4d66a5f3744b) on `lts-6.12.67` and `cos-121-18867.294.100`
+  * [CVE-2026-46242](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=a6dc643c69311677c574a0f17a3f4d66a5f3744b) on `lts-6.12.67` and `cos-121-18867.294.100`<br>
+    {% include entry-links.html code="https://github.com/J-jaeyoung/security-research/blob/submit-cve-2026-46242/pocs/linux/kernelctf/CVE-2026-46242_lts_cos/docs/exploit.md" %}
 * **Arm Mali GPU driver**
   * [CVE-2025-0819](https://developer.arm.com/documentation/110466/1-0/): Concurrency UAF vulnerability
 * **[KrCERT / KISA Hall of Fame](https://knvd.krcert.or.kr/overview/honor) (2024), Ranked 10th**

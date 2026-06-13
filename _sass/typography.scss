@@ -76,4 +76,35 @@
         color: #888;
         margin-top: 4px;
     }
+
+    /* Paper / Code / Blog pill links (see _includes/entry-links.html) */
+    .entry-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+    }
+    .entry-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 11px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #444;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 999px;
+        white-space: nowrap;
+        transition: color .15s ease, border-color .15s ease, background .15s ease;
+
+        &:hover,
+        &:focus-visible {
+            color: $accent;
+            border-color: $accent;
+            background: #f6f9ff;
+            text-decoration: none;
+            outline: none;
+        }
+    }
 }
