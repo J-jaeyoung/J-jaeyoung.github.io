@@ -42,7 +42,7 @@ discovering unknown bugs and building defenses that prevent their exploitation.
 * **[Google kernelCTF](https://google.github.io/security-research/kernelctf/rules.html): LTS / COS 0-day Winner**
   * [exp448](https://github.com/J-jaeyoung/security-research/blob/submit-cve-2026-46242/pocs/linux/kernelctf/CVE-2026-46242_lts_cos/docs/exploit.md): [CVE-2026-46242](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=a6dc643c69311677c574a0f17a3f4d66a5f3744b) on `lts-6.12.67` and `cos-121-18867.294.100`
 * **Arm Mali GPU driver**
-  * [CVE-2025-0819](https://developer.arm.com/documentation/110466/1-0/): concurrency UAF bug
+  * [CVE-2025-0819](https://developer.arm.com/documentation/110466/1-0/): Concurrency UAF vulnerability
 * **[KrCERT / KISA Hall of Fame](https://knvd.krcert.or.kr/overview/honor) (2024), Ranked 10th**
   * Reported 9 KVE-assigned remote code execution vulnerabilities in Korean image-viewer software
 
