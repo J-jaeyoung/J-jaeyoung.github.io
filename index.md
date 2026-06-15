@@ -28,7 +28,7 @@ discovering unknown bugs and building defenses that prevent their exploitation.
 1. **DMGuard: Safeguarding Kernels from Physical Page Use-After-Free Vulnerabilities**<br>
    Juhee Kim\*, <u>Jaeyoung Chung</u>\*, Dae R. Jeong, and Byoungyoung Lee<br>
    *USENIX Security Symposium (Security)*, 2026
-   {% include entry-links.html %}
+   {% include entry-links.html code="https://github.com/compsec-snu/dmguard" %}
 
 2. **GHost in the SHELL: A GPU-to-Host Memory Attack and Its Mitigation**<br>
    Sihyun Roh, Woohyuk Choi, <u>Jaeyoung Chung</u>, Yoochan Lee, Suhwan Song, and Byoungyoung Lee<br>
