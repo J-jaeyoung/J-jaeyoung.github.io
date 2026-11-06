@@ -37,17 +37,15 @@ discovering unknown bugs and building defenses that prevent their exploitation.
 
 3. **TikTag: Breaking ARM's Memory Tagging Extension with Speculative Execution**<br>
    Juhee Kim, Jinbum Park, Sihyun Roh, <u>Jaeyoung Chung</u>, Youngjoo Lee, Taesoo Kim, and Byoungyoung Lee<br>
-   *IEEE Symposium on Securit`y and Privacy (S&P)*, 2025
+   *IEEE Symposium on Security and Privacy (S&P)*, 2025
    {% include entry-links.html %}
 
 ## Vulnerabilities & Exploits
 
 * **[Google kernelCTF](https://google.github.io/security-research/kernelctf/rules.html)**
-  * [CVE-2026-74637](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=42c5ca1f0a288a52878bd72a5595b08261057438) on `lts-6.12.96` (1-day) <br>
-    * Reward: **$81,337**
+  * [CVE-2026-74637](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=42c5ca1f0a288a52878bd72a5595b08261057438) on LTS (1-day), Reward: **$81,337**
     {% include entry-links.html code="https://github.com/J-jaeyoung/security-research/blob/CVE-2026-74637/pocs/linux/kernelctf/CVE-2026-74637_lts/docs/exploit.md" %}
-  * **Bad Epoll**: [CVE-2026-46242](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=a6dc643c69311677c574a0f17a3f4d66a5f3744b) on `lts-6.12.67` and `cos-121-18867.294.100` (0-day) <br>
-    * Reward: **$92,337**
+  * **Bad Epoll**: [CVE-2026-46242](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=a6dc643c69311677c574a0f17a3f4d66a5f3744b) on LTS/COS (0-day), Reward: **$92,337**
     {% include entry-links.html site="https://badepoll.com/" code="https://github.com/J-jaeyoung/security-research/blob/submit-cve-2026-46242/pocs/linux/kernelctf/CVE-2026-46242_lts_cos/docs/exploit.md" %}
 * **Arm Mali GPU driver**
   * [CVE-2025-0819](https://developer.arm.com/documentation/110466/1-0/): Concurrency UAF vulnerability
