@@ -43,7 +43,9 @@ discovering unknown bugs and building defenses that prevent their exploitation.
 ## Vulnerabilities & Exploits
 
 * **[Google kernelCTF](https://google.github.io/security-research/kernelctf/rules.html)**
-  * **exp609**: `lts-6.12.96` <br>
+  * [CVE-2026-74637](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=42c5ca1f0a288a52878bd72a5595b08261057438) on `lts-6.12.96` (1-day) <br>
+    * Reward: **$81,337**
+    {% include entry-links.html code="https://github.com/J-jaeyoung/security-research/blob/CVE-2026-74637/pocs/linux/kernelctf/CVE-2026-74637_lts/docs/exploit.md" %}
   * **Bad Epoll**: [CVE-2026-46242](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=a6dc643c69311677c574a0f17a3f4d66a5f3744b) on `lts-6.12.67` and `cos-121-18867.294.100` (0-day) <br>
     * Reward: **$92,337**
     {% include entry-links.html site="https://badepoll.com/" code="https://github.com/J-jaeyoung/security-research/blob/submit-cve-2026-46242/pocs/linux/kernelctf/CVE-2026-46242_lts_cos/docs/exploit.md" %}
